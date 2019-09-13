@@ -1,0 +1,81 @@
+<hr>
+<p>title: Post Widgets</p>
+<h2 id="description-NexT-User-Docs-–-Third-party-Service-Integration-–-Post-Widgets"><a href="#description-NexT-User-Docs-–-Third-party-Service-Integration-–-Post-Widgets" class="headerlink" title="description: NexT User Docs – Third-party Service Integration – Post Widgets"></a>description: NexT User Docs – Third-party Service Integration – Post Widgets</h2><h3 id="Facebook-Comments-and-Likes"><a href="#Facebook-Comments-and-Likes" class="headerlink" title="Facebook Comments and Likes"></a>Facebook Comments and Likes</h3><p>The <a href="https://developers.facebook.com/docs/plugins/comments?locale=en_US">Facebook comments plugin</a> lets people comment on content on your site using their Facebook account. People can choose to share their comment activity with their friends (and friends of their friends) on Facebook as well. The comments plugin also includes built-in moderation tools and social relevance ranking.</p>
+<ol>
+<li><p>Firstly you need to integrate <a href="https://developers.facebook.com/apps">Facebook SDK</a>, by setting following options in {% label primary@theme config file %}:</p>
+<pre><code class="yml"><span class="comment"># Facebook SDK Support.</span>
+<span class="attr">facebook_sdk:</span>
+<span class="attr">  enable:</span>       <span class="literal">false</span>
+<span class="attr">  app_id:</span>       <span class="comment">#&lt;app_id&gt;</span>
+<span class="attr">  fb_admin:</span>     <span class="comment">#&lt;user_id&gt;</span>
+<span class="attr">  like_button:</span>  <span class="comment">#true</span>
+<span class="attr">  webmaster:</span>    <span class="comment">#true</span></code></pre>
+</li>
+<li><p>Then set the value <code>enable</code> to <code>true</code> in <code>facebook_comments_plugin</code> section, and change following options below:</p>
+<pre><code class="yml"><span class="comment"># Facebook comments plugin</span>
+<span class="comment"># This plugin depends on Facebook SDK.</span>
+<span class="comment"># If facebook_sdk.enable is false, Facebook comments plugin is unavailable.</span>
+<span class="attr">facebook_comments_plugin:</span>
+<span class="attr">  enable:</span>       <span class="literal">false</span>
+<span class="attr">  num_of_posts:</span> <span class="number">10</span>    <span class="comment"># min posts num is 1</span>
+<span class="attr">  width:</span>        <span class="number">100</span><span class="string">%</span>  <span class="comment"># default width is 550px</span>
+<span class="attr">  scheme:</span>       <span class="string">light</span> <span class="comment"># default scheme is light (light or dark)</span></code></pre>
+</li>
+</ol>
+<h3 id="VKontakte-Comments-and-Likes"><a href="#VKontakte-Comments-and-Likes" class="headerlink" title="VKontakte Comments and Likes"></a>VKontakte Comments and Likes</h3><p>VKontakte offers flexible commentting tools that can be easily built into your website. This enables VK users to comment on your materials without having to register on your site.</p>
+<p>{% tabs vkontakte_api %}</p>
+<!-- tab Get API ID → -->
+<p>Login to VKontakte Developers and <a href="https://vk.com/editapp?act=create">create apps</a>. Go to the <a href="https://vk.com/dev/Comments">Comments Widget</a>, you will get some code:<br>{% code lang:html %}</p>
+<script type="text/javascript">
+  VK.init({apiId: API_ID, onlyWidgets: true});
+</script>
+<p>{% endcode %}</p>
+<!-- endtab -->
+
+<!-- tab NexT Config -->
+
+<p>You can enable it by setting value <code>vkontakte_api.enable</code> to <code>true</code>, and copy <code>API_ID</code> value of <code>apiId</code> key in {% label primary@theme config file %}.</p>
+<p>{% code lang:yml next/_config.yml %}<br>vkontakte_api:<br>  enable:       false<br>  app_id:       API_ID #<app_id><br>  comments:     true<br>  num_of_posts: 10<br>{% endcode %}</p>
+<!-- endtab -->
+<p>{% endtabs %}</p>
+<p>With «Like» widget your visitors can express their attitude towards an article with one click or immediately share the link to it with their friends.</p>
+<p>{% tabs vkontakte_api_like %}</p>
+<!-- tab Get API ID → -->
+<p>Login to VKontakte Developers and <a href="https://vk.com/editapp?act=create">create apps</a>. Go to the <a href="https://vk.com/dev/Like">Like Widget</a>, you will get some code:<br>{% code lang:html %}</p>
+<script type="text/javascript">
+  VK.init({apiId: API_ID, onlyWidgets: true});
+</script>
+<p>{% endcode %}</p>
+<!-- endtab -->
+
+<!-- tab NexT Config -->
+
+<p>You can enable it by setting value <code>vkontakte_api.enable</code> to <code>true</code>, and copy <code>API_ID</code> value of <code>apiId</code> key in {% label primary@theme config file %}.</p>
+<p>{% code lang:yml next/_config.yml %}<br>vkontakte_api:<br>  enable:       false<br>  app_id:       API_ID #<app_id><br>  like:         true<br>  num_of_posts: 10<br>{% endcode %}</p>
+<!-- endtab -->
+<p>{% endtabs %}</p>
+<h3 id="Widgetpack-Rating"><a href="#Widgetpack-Rating" class="headerlink" title="Widgetpack Rating"></a>Widgetpack Rating</h3><p>Rating service with login through any social networks like Facebook, Twitter, Google+, LinkedIn, Instagram and others.</p>
+<p>{% tabs rating %}</p>
+<!-- tab Get ID → -->
+<p>Login to <a href="https://widgetpack.com/admin#signin">widgetpack</a> and add new site, you will get your site ID:<br>{% code lang:html %}<br>wpac_init.push({widget: ‘Rating’, id: ID});<br>{% endcode %}</p>
+<!-- endtab -->
+
+<!-- tab NexT Config -->
+
+<p>You can enable it by setting value <code>rating.enable</code> to <code>true</code>, and copy <code>ID</code> value of <code>id</code> in {% label primary@theme config file %}. You can also configure the rating color by editing values in <code>rating.color</code> section.</p>
+<p>{% code lang:yml next/_config.yml %}<br>rating:<br>  enable: false<br>  id:     ID #<app_id><br>  color:  fc6423<br>{% endcode %}</p>
+<!-- endtab -->
+<p>{% endtabs %}</p>
+<h3 id="AddThis"><a href="#AddThis" class="headerlink" title="AddThis"></a>AddThis</h3><p>{% tabs addthis %}</p>
+<!-- tab Sign Up → -->
+<p>Sign up in <a href="https://www.addthis.com">AddThis</a>. You can use Google/Facebook/Twitter to login.</p>
+<!-- endtab -->
+
+<!-- tab AddThis ID → -->
+<p>Get AddThis ID in this menu: <code>More..</code> → <code>General</code> → <code>ID</code>. See example on the picture below:<br><img src="/images/docs/add-this-id.png" alt="AddThis ID"></p>
+<!-- endtab -->
+
+<!-- tab NexT Config -->
+<p>Edit the configurations in <code>add_this_id</code> section in the {% label primary@theme config file %} as following:<br>{% code lang:yml next/_config.yml%}<br>add_this_id: your_add_this_id<br>{% endcode %}</p>
+<!-- endtab -->
+<p>{% endtabs %}</p>

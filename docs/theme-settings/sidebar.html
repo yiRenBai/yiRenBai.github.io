@@ -1,0 +1,152 @@
+<hr>
+<p>title: Sidebar</p>
+<h2 id="description-NexT-User-Docs-–-Theme-Settings-–-Sidebar"><a href="#description-NexT-User-Docs-–-Theme-Settings-–-Sidebar" class="headerlink" title="description: NexT User Docs – Theme Settings – Sidebar"></a>description: NexT User Docs – Theme Settings – Sidebar</h2><h3 id="Sidebar-Setting"><a href="#Sidebar-Setting" class="headerlink" title="Sidebar Setting"></a>Sidebar Setting</h3><h4 id="Sidebar-Style"><a href="#Sidebar-Style" class="headerlink" title="Sidebar Style"></a>Sidebar Style</h4><p>By default sidebar only shows in posts (have a table of content), and is placed in left side. You can change it by editing values under <code>sidebar</code> setting in {% label primary@theme config file %}.</p>
+<p>Sidebar has several options, but for now we will consider <code>position</code>, <code>width</code>, <code>display</code>, <code>offset</code>, <code>onmobile</code> and <code>dimmer</code> options.</p>
+<p>{% tabs setting-sidebar %}</p>
+<!-- tab <code>position</code> -->
+<p>Set up sidebar position by changing the value of <code>sidebar.position</code>, which can be one of following:</p>
+<ul>
+<li><strong><code>left</code></strong> → Place at the left of the screen.</li>
+<li><code>right</code> → Place at the right of the screen.</li>
+</ul>
+<p>{% code lang:yml next/_config.yml %}<br>sidebar:<br>  position: left</p>
+<p>  #position: right<br>{% endcode %}</p>
+<!-- endtab -->
+
+<!-- tab <code>width</code> -->
+<p>You can change sidebar width by specify <code>sidebar.width</code> setting in pixels, for example:</p>
+<p>{% code lang:yml next/_config.yml %}<br>sidebar:<br>  width: 300<br>{% endcode %}</p>
+<p>{% note warning %}<br>This option commented out by default and values are:</p>
+<ul>
+<li>For Muse | Mist schemes: <code>320</code></li>
+<li>For Pisces | Gemini schemes: <code>240</code></li>
+</ul>
+<p>{% endnote %}</p>
+<p>{% note danger %}<br>From version {% label <a href="mailto:danger@6.0.4">danger@6.0.4</a> %} to {% label <a href="mailto:danger@6.3.0">danger@6.3.0</a> %} option was called <code>sidebar_width</code> and was available for Gemini Scheme only.<br>From {% label <a href="mailto:danger@6.4.0">danger@6.4.0</a> %} version or higher, option renamed to <code>sidebar.width</code> and available for all schemes.<br>{% endnote %}</p>
+<!-- endtab -->
+
+<!-- tab <code>display</code> -->
+<p>Set up conditions under which sidebar will show by editing <code>sidebar.display</code> value, which can be one of following:</p>
+<ul>
+<li><strong><code>post</code></strong> → Show sidebar only in posts which have index.</li>
+<li><code>always</code> → Show sidebar in all pages.</li>
+<li><code>hide</code> → Hide it in all pages (but can be opened by user manually).</li>
+<li><code>remove</code> → Remove sidebar totally.</li>
+</ul>
+<p>{% code lang:yml next/_config.yml %}<br>sidebar:<br>  display: post</p>
+<p>  #display: always</p>
+<p>  #display: hide</p>
+<p>  #display: remove<br>{% endcode %}</p>
+<!-- endtab -->
+
+<!-- tab <code>offset</code> -->
+<p>Set up sidebar offset from top menubar in pixels by changing the value of <code>sidebar.offset</code>, which can be one of following:</p>
+<p>{% code lang:yml next/_config.yml %}<br>sidebar:<br>  offset: 12<br>{% endcode %}</p>
+<p>{% note danger %}<br>For now only Pisces / Gemini Schemes supports <code>offset</code> setting under <strong>6.0.x</strong> version or higher.<br>{% endnote %}</p>
+<!-- endtab -->
+
+<!-- tab <code>onmobile</code> -->
+<p>Set the value <code>sidebar.onmobile</code> to <code>true</code> to enable sidebar on narrow view for mobile device as following:</p>
+<p>{% code lang:yml next/_config.yml %}<br>sidebar:<br>  onmobile: true<br>{% endcode %}</p>
+<p>{% note danger %}<br>For now only Muse / Mist Schemes supports <code>onmobile</code> setting under <strong>6.0.x</strong> version or higher.<br>{% endnote %}</p>
+<!-- endtab -->
+
+<!-- tab <code>dimmer</code> -->
+<p>Set the value <code>sidebar.dimmer</code> to <code>true</code> to enable the feature: click any blank part of the page to close sidebar.</p>
+<p>{% code lang:yml next/_config.yml %}<br>sidebar:<br>  dimmer: true<br>{% endcode %}</p>
+<p>{% note danger %}<br>For now only Muse / Mist Schemes supports <code>dimmer</code> setting under <strong>7.0.x</strong> version or higher.<br>{% endnote %}</p>
+<!-- endtab -->
+
+<p>{% endtabs %}</p>
+<h4 id="Sidebar-Site-State"><a href="#Sidebar-Site-State" class="headerlink" title="Sidebar Site State"></a>Sidebar Site State</h4><p>By default NexT shows the categories and counts of Posts / Categories / Tags in sidebar. You can configure it by editing values in <code>site_state</code> section in {% label primary@theme config file %}.</p>
+<pre><code class="yml"><span class="attr">site_state:</span> <span class="literal">true</span></code></pre>
+<h4 id="Sidebar-Social-Links"><a href="#Sidebar-Social-Links" class="headerlink" title="Sidebar Social Links"></a>Sidebar Social Links</h4><p>{% note default %}<br>Social Links have similar fucture as <a href="../getting-started/#Configuring-Menu-Items">Menu Items</a>, only target link there is difference: specified link must have full url path (permalink).<br>{% endnote %}</p>
+<p>Edit the <code>social</code> section in {% label primary@theme config file %} as following:</p>
+<pre><code class="yml"><span class="attr">social:</span>
+<span class="attr">  GitHub:</span> <span class="attr">https://github.com/yourname</span> <span class="string">||</span> <span class="string">github</span>
+<span class="attr">  E-Mail:</span> <span class="attr">mailto:yourname@gmail.com</span> <span class="string">||</span> <span class="string">envelope</span>
+<span class="attr">  Google:</span> <span class="attr">https://plus.google.com/yourname</span> <span class="string">||</span> <span class="string">google</span>
+<span class="attr">  Twitter:</span> <span class="attr">https://twitter.com/yourname</span> <span class="string">||</span> <span class="string">twitter</span>
+  <span class="string">FB</span> <span class="attr">Page:</span> <span class="attr">https://www.facebook.com/yourname</span> <span class="string">||</span> <span class="string">facebook</span>
+  <span class="string">VK</span> <span class="attr">Group:</span> <span class="attr">https://vk.com/yourname</span> <span class="string">||</span> <span class="string">vk</span>
+<span class="attr">  StackOverflow:</span> <span class="attr">https://stackoverflow.com/yourname</span> <span class="string">||</span> <span class="string">stack-overflow</span>
+<span class="attr">  YouTube:</span> <span class="attr">https://youtube.com/yourname</span> <span class="string">||</span> <span class="string">youtube</span>
+<span class="attr">  Instagram:</span> <span class="attr">https://instagram.com/yourname</span> <span class="string">||</span> <span class="string">instagram</span>
+<span class="attr">  Skype:</span> <span class="attr">skype:yourname?call|chat</span> <span class="string">||</span> <span class="string">skype</span></code></pre>
+<p>By default NexT shows the icons of social links in sidebar.</p>
+<p>{% tabs social_icons %}</p>
+<!-- tab <code>enable</code> -->
+<p>You can configure it by editing values in <code>social_icons.enable</code> section in {% label primary@theme config file %}.</p>
+<p>{% code lang:yml next/_config.yml %}<br>social_icons:<br>  enable: true<br>{% endcode %}</p>
+<!-- endtab -->
+
+<!-- tab <code>icons_only</code> -->
+<p>Set the value <code>icons_only</code> to <code>true</code> to display social icons without description in <code>social_icons</code> section in {% label primary@theme config file %} as following:</p>
+<p>{% code lang:yml next/_config.yml %}<br>social_icons:<br>  icons_only: true<br>{% endcode %}</p>
+<!-- endtab -->
+
+<!-- tab <code>transition</code> -->
+<p>Set the value <code>transition</code> to <code>true</code> to display social icons with transition effects in <code>social_icons</code> section in {% label primary@theme config file %} as following:</p>
+<p>{% code lang:yml next/_config.yml %}<br>social_icons:<br>  transition: true<br>{% endcode %}</p>
+<!-- endtab -->
+
+<p>{% endtabs %}</p>
+<h4 id="Sidebar-Blogrolls"><a href="#Sidebar-Blogrolls" class="headerlink" title="Sidebar Blogrolls"></a>Sidebar Blogrolls</h4><p>You can add blog rolls within sidebar in NexT.</p>
+<p>{% tabs blogrolls %}</p>
+<!-- tab <code>links_settings</code> -->
+<p>By default NexT shows the <code>link</code> icon {% btn #,, link %} before <code>title</code>. The name of icon can be found in <a href="https://fontawesome.com">Font Awesome</a> site. You can configure it by editing values in <code>links_settings</code> section in {% label primary@theme config file %}.</p>
+<p>{% code lang:yml next/_config.yml %}<br>links_settings:<br>  icon: link<br>{% endcode %}</p>
+<p>By default NexT uses <code>Links</code> as the name of blogroll. You can configure it by editing values in <code>links_settings</code> section in {% label primary@theme config file %}.</p>
+<p>{% code lang:yml next/_config.yml %}<br>links_settings:<br>  title: Links<br>{% endcode %}</p>
+<p>By default all blogrolls are displayed in block. You can configure it to <code>inline</code> by editing values in <code>links_settings</code> section in {% label primary@theme config file %}.</p>
+<p>{% code lang:yml next/_config.yml %}<br>links_settings:<br>  layout: block<br>{% endcode %}</p>
+<!-- endtab -->
+
+<!-- tab <code>links</code> -->
+<p>Edit the <code>links</code> section in {% label primary@theme config file %} and add your favorite links:</p>
+<p>{% code lang:yml next/_config.yml %}<br>links:<br>  Title1: <a href="http://example1.com/">http://example1.com/</a><br>  Title2: <a href="http://example2.com/">http://example2.com/</a><br>{% endcode %}</p>
+<!-- endtab -->
+
+<p>{% endtabs %}</p>
+<h4 id="Sidebar-TOC"><a href="#Sidebar-TOC" class="headerlink" title="Sidebar TOC"></a>Sidebar TOC</h4><p>{% tabs toc %}</p>
+<!-- tab <code>enable</code> -->
+<p>By default NexT shows <code>Table Of Contents (TOC)</code> in the Sidebar. You can disable it by setting <code>toc.enable</code> to <code>false</code> in {% label primary@theme config file %}.</p>
+<p>{% code lang:yml next/_config.yml %}<br>toc:<br>  enable: true<br>{% endcode %}</p>
+<!-- endtab -->
+
+<!-- tab <code>number</code> -->
+<p>By default NexT adds list number to TOC automatically. You can disable it by setting <code>toc.number</code> to <code>false</code> in {% label primary@theme config file %}.</p>
+<p>{% code lang:yml next/_config.yml %}<br>toc:<br>  number: true<br>{% endcode %}</p>
+<!-- endtab -->
+
+<!-- tab <code>wrap</code> -->
+<p>If the post header width longer than sidebar width, you can wrap the header words in next lines by setting <code>toc.wrap</code> to <code>true</code> in {% label primary@theme config file %}.</p>
+<p>{% code lang:yml next/_config.yml %}<br>toc:<br>  wrap: true<br>{% endcode %}</p>
+<!-- endtab -->
+
+<!-- tab <code>expand_all</code> -->
+<p>If you want all level of TOC in a post to be displayed, rather than the activated part of it, you can set <code>toc.expand_all</code> to <code>true</code> in {% label primary@theme config file %}.</p>
+<p>{% code lang:yml next/_config.yml %}<br>toc:<br>  expand_all: true<br>{% endcode %}</p>
+<!-- endtab -->
+
+<!-- tab <code>max_depth</code> -->
+<p>By default maximum heading depth of generated toc is 6. You can set it by setting <code>toc.max_depth</code> to <code>another number</code> in {% label primary@theme config file %}.<br>{% code lang:yml next/_config.yml %}<br>toc:<br>  max_depth: 3<br>{% endcode %}</p>
+<!-- endtab -->
+<p>{% endtabs %}</p>
+<h3 id="Back-To-Top"><a href="#Back-To-Top" class="headerlink" title="Back To Top"></a>Back To Top</h3><p>{% tabs b2t %}</p>
+<!-- tab <code>enable</code> -->
+<p>{% code lang:yml next/_config.yml %}<br>back2top:<br>  enable: true<br>{% endcode %}<br>Set the value <code>back2top.enable</code> to <code>true</code> to display <code>Back to top</code> button.</p>
+<!-- endtab -->
+
+<!-- tab <code>enable</code> -->
+<p>{% code lang:yml next/_config.yml %}<br>back2top:</p>
+<h1 id="Back-to-top-in-sidebar"><a href="#Back-to-top-in-sidebar" class="headerlink" title="Back to top in sidebar."></a>Back to top in sidebar.</h1><p>  sidebar: true<br>{% endcode %}</p>
+<p>Set the value <code>back2top.sidebar</code> to <code>true</code> to put the button in sidebar.</p>
+<!-- endtab -->
+
+<!-- tab <code>scrollpercent</code> -->
+<p>{% code lang:yml next/_config.yml %}<br>back2top:</p>
+<h1 id="Scroll-percent-label-in-b2t-button"><a href="#Scroll-percent-label-in-b2t-button" class="headerlink" title="Scroll percent label in b2t button."></a>Scroll percent label in b2t button.</h1><p>  scrollpercent: true<br>{% endcode %}</p>
+<p>Set the value <code>back2top.scrollpercent</code> to <code>true</code> to display scroll percent label in <code>Back to top</code> button.</p>
+<!-- endtab -->
+<p>{% endtabs %}</p>

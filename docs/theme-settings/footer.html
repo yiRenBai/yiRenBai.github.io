@@ -1,0 +1,82 @@
+<hr>
+<p>title: Footer</p>
+<h2 id="description-NexT-User-Docs-–-Theme-Settings-–-Footer"><a href="#description-NexT-User-Docs-–-Theme-Settings-–-Footer" class="headerlink" title="description: NexT User Docs – Theme Settings – Footer"></a>description: NexT User Docs – Theme Settings – Footer</h2><h3 id="Site-Footer-Setting"><a href="#Site-Footer-Setting" class="headerlink" title="Site Footer Setting"></a>Site Footer Setting</h3><h4 id="Site-Start-Time"><a href="#Site-Start-Time" class="headerlink" title="Site Start Time"></a>Site Start Time</h4><p>By default NexT shows current year in the footer like <code>© 2018</code>. You can configure it to show the time gap like <code>© 2015 - 2018</code> by editing values in <code>since</code> section in {% label primary@theme config file %}.</p>
+<pre><code class="yml"><span class="attr">footer:</span>
+<span class="attr">  since:</span> <span class="number">2015</span></code></pre>
+<h4 id="Site-Footer-Icon"><a href="#Site-Footer-Icon" class="headerlink" title="Site Footer Icon"></a>Site Footer Icon</h4><p>By default NexT shows black <code>user</code> icon {% btn #,, user %} without animation between year and copyright information in the footer. You can configure it by editing values in <code>icon</code> section in {% label primary@theme config file %}.</p>
+<p>{% tabs icon %}</p>
+<!-- tab <code>name</code> -->
+<p>The name of footer icon can be founded in <a href="https://fontawesome.com">Font Awesome</a> site. <code>heart</code> is recommended.</p>
+<p>{% code lang:yml next/_config.yml %}<br>footer:<br>  icon:<br>    name: user<br>{% endcode %}</p>
+<!-- endtab -->
+
+<!-- tab <code>animated</code> -->
+<p>Set up animated of footer icon by changing the value of <code>icon.animated</code>:</p>
+<ul>
+<li><code>true</code> → Icon will be animated.</li>
+<li><strong><code>false</code></strong> → Icon will not be animated.</li>
+</ul>
+<p>{% code lang:yml next/_config.yml %}<br>footer:<br>  icon:<br>    animated: false<br>{% endcode %}</p>
+<!-- endtab -->
+
+<!-- tab <code>color</code> -->
+<p>Set up color of footer icon by changing the value of <code>icon.color</code>. Please use Hex Code, and red (#ff0000) is recommended for <code>heart</code> icon.</p>
+<p>{% code lang:yml next/_config.yml %}<br>footer:<br>  icon:<br>    color: “#808080”<br>{% endcode %}</p>
+<!-- endtab -->
+<p>{% endtabs %}</p>
+<h4 id="Site-Copyright-Name"><a href="#Site-Copyright-Name" class="headerlink" title="Site Copyright Name"></a>Site Copyright Name</h4><p>By default NexT shows the name of <code>author</code> from {% label info@site config file %}. You can configure it by editing values in <code>copyright</code> section in {% label primary@theme config file %}.</p>
+<pre><code class="yml"><span class="attr">footer:</span>
+<span class="attr">  copyright:</span></code></pre>
+<h4 id="Site-Platform-Information"><a href="#Site-Platform-Information" class="headerlink" title="Site Platform Information"></a>Site Platform Information</h4><p>By default NexT shows Hexo and Theme &amp; scheme information like <code>Powered by Hexo v3.7.1 | Theme — NexT.Muse v6.3.0</code>. You can configure it by editing values in <code>powered</code> and <code>theme</code> section in {% label primary@theme config file %}.</p>
+<p>{% tabs platform %}</p>
+<!-- tab <code>powered</code> -->
+
+<p>{% subtabs platform1 %}</p>
+<!-- tab <code>enable</code> -->
+<ul>
+<li><strong><code>true</code></strong> → Displaying <code>Powered by Hexo</code> Information.</li>
+<li><code>false</code> → Not Displaying <code>Powered by Hexo</code> Information.</li>
+</ul>
+<p>{% code lang:yml next/_config.yml %}<br>footer:<br>  powered:<br>    enable: true<br>{% endcode %}</p>
+<!-- endtab -->
+
+<!-- tab <code>version</code> -->
+<ul>
+<li><strong><code>true</code></strong> → Displaying Hexo Version Information.</li>
+<li><code>false</code> → Not Displaying Hexo Version Information.</li>
+</ul>
+<p>{% code lang:yml next/_config.yml %}<br>footer:<br>  powered:<br>    version: true<br>{% endcode %}</p>
+<!-- endtab -->
+<p>{% endsubtabs %}</p>
+<!-- endtab -->
+
+<!-- tab <code>theme</code> -->
+
+<p>{% subtabs platform2 %}</p>
+<!-- tab <code>enable</code> -->
+<ul>
+<li><strong><code>true</code></strong> → Displaying Theme &amp; Scheme Information.</li>
+<li><code>false</code> → Not Displaying Theme &amp; Scheme Information.</li>
+</ul>
+<p>{% code lang:yml next/_config.yml %}<br>footer:<br>  theme:<br>    enable: true<br>{% endcode %}</p>
+<!-- endtab -->
+
+<!-- tab <code>version</code> -->
+<ul>
+<li><strong><code>true</code></strong> → Displaying Theme NexT Version Information.</li>
+<li><code>false</code> → Not Displaying Theme NexT Version Information.</li>
+</ul>
+<p>{% code lang:yml next/_config.yml %}<br>footer:<br>  theme:<br>    version: true<br>{% endcode %}</p>
+<!-- endtab -->
+<p>{% endsubtabs %}</p>
+<!-- endtab -->
+
+<p>{% endtabs %}</p>
+<h4 id="Site-Beian-Information"><a href="#Site-Beian-Information" class="headerlink" title="Site Beian Information"></a>Site Beian Information</h4><p>Beian information is for Chinese users. By default NexT will not show the information of beian. You can configure it by editing values in <code>beian</code> section in {% label primary@theme config file %}.</p>
+<pre><code class="yml"><span class="attr">footer:</span>
+<span class="attr">  beian:</span>
+<span class="attr">    enable:</span> <span class="literal">true</span>
+<span class="attr">    icp:</span> <span class="string">京ICP备</span> <span class="number">1234567890</span><span class="string">号-1</span>
+<span class="attr">    gongan_id:</span> <span class="number">1234567890</span>
+<span class="attr">    gongan_num:</span> <span class="string">京公网安备</span> <span class="number">1234567890</span><span class="string">号</span>
+<span class="attr">    gongan_icon_url:</span> <span class="string">/uploads/beian.png</span></code></pre>
