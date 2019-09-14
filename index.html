@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>一人白</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
@@ -43,10 +43,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="./img/head.jpg" class="js-avatar">
+			<img src="" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">一人白</a></h1>
+		  <h1 class="header-author"><a href="/">John Doe</a></h1>
 		</hgroup>
 		
 
@@ -101,10 +101,10 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="./img/head.jpg" class="js-avatar">
+				<img src="" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">一人白</h1>
+			  <h1 class="header-author js-header-author">John Doe</h1>
 			</hgroup>
 			
 			
@@ -152,19 +152,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-第一天吼吼吼" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Hexo建站流程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/13/第一天吼吼吼/">第一天吼吼吼</a>
+      <a class="article-title" href="/2019/09/13/Hexo建站流程/">Hexo建站（一）</a>
     </h1>
   
 
         
-        <a href="/2019/09/13/第一天吼吼吼/" class="archive-article-date">
+        <a href="/2019/09/13/Hexo建站流程/" class="archive-article-date">
   	<time datetime="2019-09-13T05:23:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-13</time>
 </a>
         
@@ -172,8 +172,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##我打算写一篇</p>
-<p><strong>OK</strong></p>
+        <h2 id="本文介绍Hexo在本地建站以及部署到github上的流程…"><a href="#本文介绍Hexo在本地建站以及部署到github上的流程…" class="headerlink" title="本文介绍Hexo在本地建站以及部署到github上的流程…"></a>本文介绍Hexo在本地建站以及部署到github上的流程…</h2><h4 id="首先特别感谢B站UP主CodeSheep"><a href="#首先特别感谢B站UP主CodeSheep" class="headerlink" title="首先特别感谢B站UP主CodeSheep"></a>首先特别感谢B站UP主CodeSheep</h4><p><strong>本文演示全部在Windows 10 64操作系统下进行</strong></p>
+<p><strong>OK现在开始</strong></p>
+<h3 id="1-安装Node-js"><a href="#1-安装Node-js" class="headerlink" title="1.安装Node.js"></a>1.安装Node.js</h3><p><strong>官网链接：<a href="https://nodejs.org" target="_blank" rel="noopener">https://nodejs.org</a></strong></p>
+<p><img src="https://caiyantao.gitee.io/2019/04/13/Hexo-%E4%B8%80/267b6d6d335cf62907c70321a1cbd3b.png" alt="267b6d6d335cf62907c70321a1cbd3b"></p>
+<p>下载左边这个，一路Next 全部默认安装就OK</p>
+<img src="https://caiyantao.gitee.io/2019/04/13/Hexo-%E4%B8%80/205266cc7bbd59bbf8663fd1f775e36.png" alt="img" style="zoom: 200%;">
+
+
+
+<h3 id="2-安装Git"><a href="#2-安装Git" class="headerlink" title="2.安装Git"></a>2.安装Git</h3><p><strong>官网链接：<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a></strong></p>
+<p>根据自己情况选择对应版本下载：</p>
+<p><img src="https://caiyantao.gitee.io/2019/04/13/Hexo-%E4%B8%80/9bbee71932a2447533abd0a4c72aa9d.png" alt="9bbee71932a2447533abd0a4c72aa9d"></p>
+<p>安装不必多说，一路Next</p>
+<p>完成后我们会看到有一个Git Bash ，这个的存在类似Linux的终端了，用来执行Git命令。</p>
+<h3 id="3-安装hexo"><a href="#3-安装hexo" class="headerlink" title="3.安装hexo"></a>3.安装hexo</h3><p>这里我们首先创建一个文件夹 取名blog，之后的操作都是在blog目录下进行的（如果哪里出现问题不好解决，直接<strong>干掉</strong>blog目录重新开始就好了）。</p>
+<p>目录建好后，我们可以先查看一下刚刚安装Node是否成功 ，以及npm（它的包管理器）情况</p>
+<p>当然都是目前最新版本啦</p>
+<p><img src="C:%5CUsers%5Cdell%5CDesktop%5C%E6%8D%95%E8%8E%B72.PNG" alt></p>
+<p>接下来我们需要安装一个辅助提高我们下载速度的东东叫做cnpm</p>
+<p>终端输入：<strong><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></strong></p>
+<p>终端输入：<code>cnpm</code>查看是否安装成功</p>
 
       
 
@@ -186,7 +205,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/13/第一天吼吼吼/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/09/13/Hexo建站流程/">展开全文 >></a>
         </p>
       
 
@@ -301,7 +320,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 一人白
+    		&copy; 2019 John Doe
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
