@@ -52,10 +52,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/img/head.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">一人白</a></h1>
 		</hgroup>
 		
 
@@ -110,10 +110,10 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/img/head.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">一人白</h1>
 			</hgroup>
 			
 			
@@ -196,41 +196,48 @@
 <h3 id="3-安装hexo"><a href="#3-安装hexo" class="headerlink" title="3.安装hexo"></a>3.安装hexo</h3><p>这里我们首先创建一个文件夹 取名blog，之后的操作都是在blog目录下进行的（如果哪里出现问题不好解决，直接<strong>干掉</strong>blog目录重新开始就好了）。</p>
 <p>目录建好后，我们可以先查看一下刚刚安装Node是否成功 ，以及npm（它的包管理器）情况</p>
 <p>当然都是目前最新版本啦</p>
-<p><img src="D:%5Cblog.deploy_git%5Cimg%5C2019%E5%B9%B49%E6%9C%8814%E6%97%A501.PNG" alt="2019年9月14日01"></p>
+<p><img src="/img/2019年9月14日01.PNG" alt="2019年9月14日01"></p>
 <p>接下来我们需要安装一个辅助提高我们下载速度的东东叫做cnpm</p>
-<p>终端输入：**<figure class="highlight plain"><figcaption><span>install -g cnpm --registry</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">终端输入：```cnpm```查看是否安装成功</span><br><span class="line"></span><br><span class="line">![2019年9月14日05](C:\Users\dell\Desktop\2019年9月14日05.PNG)</span><br><span class="line"></span><br><span class="line">完成后安装Hexo，用到我们刚刚安装好的cnpm</span><br><span class="line"></span><br><span class="line">终端输入：**cnpm install -g hexo-cli**</span><br><span class="line"></span><br><span class="line">完成后输入**hexo -v**出现以下说明成功</span><br><span class="line"></span><br><span class="line">![2019年9月14日06](C:\Users\dell\Desktop\2019年9月14日06.PNG)</span><br><span class="line"></span><br><span class="line">可以看到Hexo也是基于Node的，会显示当前Node版本10.16.3</span><br><span class="line"></span><br><span class="line">到此所有安装结束，开始我们的建站：</span><br><span class="line"></span><br><span class="line">### 4.建站</span><br><span class="line"></span><br><span class="line">到刚刚创建的blog目录下，</span><br><span class="line"></span><br><span class="line">终端输入**hexo init** </span><br><span class="line"></span><br><span class="line">会自动为我们生成很多目录和文件</span><br><span class="line"></span><br><span class="line">![2019年9月14日02](D:\blog\.deploy_git\img\2019年9月14日02.PNG)</span><br><span class="line"></span><br><span class="line">**这里介绍常用的四个命令**</span><br></pre></td></tr></table></figure></p>
-<p>hexo clean  #用来清理缓存文件<br>hexo g      #生成文件<br>hexo s      #运行本地服务器<br>hexo d      #上传到服务器</p>
-<pre><code>
-我们运行hexo s
+<p>终端输入：<span>install -g cnpm --registry</span>
+<p>终端输入：<strong>cnpm</strong>查看是否安装成功</p>
+<p><img src="/img/2019年9月14日05.PNG" alt="2019年9月14日05"></p>
+<p>完成后安装Hexo，用到我们刚刚安装好的cnpm</p>
+<p>终端输入：<strong>cnpm install -g hexo-cli</strong></p>
+<p>完成后输入<strong>hexo -v</strong>出现以下说明成功</p>
+<p><img src="/img/2019年9月14日06.PNG" alt="2019年9月14日06"></p>
+<p>到此所有安装结束，开始我们的建站：</p>
+<p><h3> 4.建站</h3></p>
+<p>到刚刚创建的blog目录下，</p>
+<p>终端输入<strong>hexo init</strong> </p>
+<p>会自动为我们生成很多目录和文件</p>
+<p><img src="/img/2019年9月14日02.PNG" alt="2019年9月14日02"></p>
+这里介绍常用的四个命令
 
-![2019年9月14日03](D:\blog\.deploy_git\img\2019年9月14日03.PNG)
+<p>hexo clean  #用来清理缓存文件<br>hexo g      #生成文件<br>hexo s      #运行本地服务器<br>hexo d      #上传到服务器</p>
+
+我们运行<strong>hexo s</strong>
+
+<p><img src="/img/2019年9月14日03.PNG" alt="2019年9月14日03"></p>
 
 我们此时可以通过本机4000端口访问我们刚建立的站
 
 到此本地建立完成（如有错误，不要急，干掉blog目录重来）
 
-**下面介绍如何推到github上面**
+<p><strong>下面介绍如何推到github上面</strong></p>
 
-首先我们需要有一个空仓库（因为它会把之前的仓库清空再上传，可以先把自己已有备份，或者直接建新仓库方便）
+<p>首先我们需要有一个空仓库（因为它会把之前的仓库清空再上传，可以先把自己已有备份，或者直接建新仓库方便）</p>
 
-接下来在blog目录下修改_config.yml文件
+<p>接下来在blog目录下修改_config.yml文件</p>
 
-![2019年9月14日04](D:\blog\.deploy_git\img\2019年9月14日04.PNG)
+<p><img src="/img/2019年9月14日04.PNG" alt="2019年9月14日04"></p>
 
-最后两步：
-
-终端输入：hexo g     生成文件
-
-终端输入：hexo d     上传到服务器
-
-这样，在浏览器顶输入仓库名就可以访问自己的博客啦！
-
-我这里是https://yirenbai.github.io ，欢迎大家来看看。
-
-下一期我们会讲到如何更换好看的主题
-
-#### 感谢观看！！！
-</code></pre>
+<p>最后两步：</p>
+<p>终端输入：hexo g     生成文件</p>
+<p>终端输入：hexo d     上传到服务器</p>
+<p>这样，在浏览器顶输入仓库名就可以访问自己的博客啦！</p>
+<p>我这里是https://yirenbai.github.io ，欢迎大家来访。</p>
+<p>下一期我们会讲到如何更换好看的主题</p>
+<p><h4>感谢观看！！！</h4></p>
       
 
       
@@ -368,7 +375,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 John Doe
+    		&copy; 2019 一人白
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
